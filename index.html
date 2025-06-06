@@ -3,23 +3,84 @@
   <head>
     <meta charset="UTF-8">  <!--makes sure different languages are displayed correctly-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--ensures correct scaling for devices-->
-    <title>William's Profile Card!</title>  <!--what shows up in the browser tab-->
+    <title>William Cummings | Portfolio</title>  <!--what shows up in the browser tab-->
     <link rel="stylesheet" href="style.css">  <!--links to the CSS file for styling-->
   </head>
   <body>
-    <div class="profile-card">
-      <img src="img/example.png" alt="Profile picture">
+    <header>
       <h1>William Cummings</h1>
-      <h2>Web Developer and Programmer</h2>
-      <p>Hello! I'm William, a passionate web developer who loves building websites and programming!</p>
+      <img src="img/me.jpg" alt="William Cummings" class="profile-pic">
+      <h2>Scroll down to learn more about me!</h2>
+    </header>
 
-      <h3>My Favorite Websites</h3>
-      <ul>  <!--unorded list-->
-        <li><a href="https://youtube.com/">YouTube</a></li>
-        <li><a href="https://github.com/">GitHub</a></li>
-        <li><a href="https://netflix.com/">Netflix</a></li>
-        <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
-      </ul>
-    </div>
+    <main>
+      <section id="main-content">
+        <!-- About Me -->
+        <div id="about">
+          <h3>About Me</h3>
+          <p>
+            Hello! I'm William, a passionate programmer who enjoys building websites and creating functional programs. 
+            I enjoy the challenge and creativity of programming and I look forward to showing you that through my work!
+          </p>
+        </div>
+
+        <!-- Skills -->
+        <div id="skills">
+          <h3>Skills</h3>
+          <p>Here are some programming languages that I have learned (or am learning) right now!</p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Python</li>
+            <li>Java</li>
+          </ul>
+        </div>
+
+        <!-- Favorite Movies -->
+        <div id="movies">
+          <h3>Favorite Movies</h3>
+          <p>Here are some of my favorite movies as of recently! Feel free to click the image to read about the movie!</p>
+          <ul>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/The_Benchwarmers" target="_blank">
+                <img src="img/bench.png" alt="The Benchwarmers" style="width:100px; height:auto; border-radius:8px; cursor:pointer;">
+              </a>
+              The Benchwarmers
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/The_Conjuring" target="_blank">
+                <img src="img/conjuring.png" alt="The Conjuring" style="width:100px; height:auto; border-radius:8px; cursor:pointer;">
+              </a>
+              The Conjuring
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Hereditary_(film)" target="_blank">
+                <img src="img/hereditary.png" alt="Hereditary" style="width:100px; height:auto; border-radius:8px; cursor:pointer;">
+              </a>
+              Hereditary
+            </li>
+            <li>
+              <a href="https://en.wikipedia.org/wiki/Pride_%26_Prejudice_(2005_film)" target="_blank">
+                <img src="img/pandp.png" alt="Pride and Prejudice" style="width:100px; height:auto; border-radius:8px; cursor:pointer;">
+              </a>
+              Pride and Prejudice
+            </li>
+          </ul>
+        </div>
+
+        <!-- Connect With Me -->
+        <div id="connections">
+          <h3>Connect With Me</h3>
+          <p>
+            <a href="https://github.com/willc10">GitHub</a> |
+            <a href="https://linkedin.com/in/william-cummings-187b0820a">LinkedIn</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>@2025 William Cummings</p>
+    </footer>
   </body>
 </html>

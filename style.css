@@ -1,60 +1,222 @@
+/* ========== Base Styles ========== */
 body {
-  background-color: #e6e6fa; /* light purple */
-  font-family: 'Segoe UI', Arial, sans-serif; /* consistent font for all text */
+  background: url('img/background.jpg') no-repeat center center fixed; /* Full-page background image */
+  background-size: cover;
+  font-family: 'Segoe UI', Arial, sans-serif; /* Main font */
   text-align: center;
 }
 
-.profile-card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(44, 171, 44, 0.12);
-  max-width: 500px;
-  margin: 60px auto 0 auto;
-  padding: 32px 24px 28px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* ========== Header ========== */
+header {
+  width: 100%; /* Full width */
+  background-size: cover;
+  padding: 32px 0 20px 0; /* Top, right/left, bottom padding */
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.profile-card img {
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 18px;
-  box-shadow: 0 2px 8px rgba(44, 171, 44, 0.10);
+.profile-pic {
+  width: 220px; /* Profile image size */
+  height: 220px;
+  object-fit: cover; /* Ensures image covers the area */
+  border-radius: 50%; /* Circular image */
+  margin: 24px 0;
+  border: 4px solid #ffffff22; /* Subtle border */
 }
 
-.profile-card ul {
-  list-style: none;      /* removes bullet points */
-  padding: 0;            /* removes default padding */
-  margin: 0;             /* removes default margin */
-}
-
-.profile-card li {
-  margin-bottom: 8px;    /* space between links */
-}
-
+/* ========== Typography ========== */
 h1 {
   font-size: 2.2em;
   margin-top: 0;
   margin-bottom: 10px;
-  color: #228B22;
+  color: #ffffff;
   font-family: inherit;
 }
 
 h2 {
   font-size: 1.3em;
   margin: 0 0 18px 0;
-  color: #2cab2c;
+  color: #ffffff;
   font-family: inherit;
   font-weight: 500;
+}
+
+h3, h4 {
+  color: rgb(33, 26, 165); /* Blue for section headers */
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 18px;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.6;
-  color: #333;
-  margin: 0;
+  color: #000000;
+  margin: 0 auto;
   font-family: inherit;
+  max-width: 600px; /* Limits paragraph width for readability */
+  text-align: center;
+}
+
+/* ========== Lists ========== */
+ul, li {
+  color: #000000;
+}
+
+/* ========== Main Content Layout ========== */
+#main-content {
+  background: rgb(255, 255, 255); /* White background for main content */
+  border: 2px solid #132a5c;
+  border-radius: 0;
+  margin: 0 0 0 0;
+  padding: 32px 0;
+  width: 100%;
+  max-width: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10); /* Soft shadow */
+}
+
+#main-content > div {
+  margin-bottom: 40px; /* Space between sections */
+  padding: 32px 0;     /* Vertical padding for each section */
+}
+
+#main-content > div:last-child {
+  margin-bottom: 0; /* No margin after last section */
+}
+
+/* Subtle alternating section backgrounds */
+#main-content > div:nth-child(even) {
+  background: rgba(33, 26, 165, 0.06); /* Light blue tint for even sections */
+  border-radius: 0;
+  box-shadow: none;
+  padding: 32px 0;
+}
+
+/* ========== About, Skills, Portfolio Section Spacing ========== */
+#about,
+#skills {
+  margin-bottom: 60px; /* Extra space after About and Skills */
+}
+
+#portfolio {
+  margin-bottom: 0;
+}
+
+/* ========== Skills Section ========== */
+#skills ul {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Horizontal layout */
+  justify-content: center;
+  gap: 24px; /* Space between skill items */
+}
+
+#skills li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  font-size: 1.1em;
+  background: rgb(33, 26, 165); /* Blue skill box */
+  border-radius: 12px;
+  padding: 18px 20px;
+  min-width: 80px;
+  transition: background 0.2s; /* Smooth hover transition */
+}
+
+#skills li:hover {
+  background: #534ef1; /* Lighter blue on hover */
+}
+
+#skills p {
+  margin-bottom: 32px; /* Space below skills intro paragraph */
+}
+
+/* ========== Movies Section ========== */
+#movies {
+  margin-bottom: 60px; /* Space below movies section */
+}
+
+#movies ul {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 0;
+  display: flex; /* Horizontal layout */
+  justify-content: center;
+  gap: 64px; /* Space between movie items */
+  align-items: center;
+}
+
+#movies li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000000;
+  font-size: 1.1em;
+  min-width: 140px;
+}
+
+#movies p {
+  margin-bottom: 36px; /* Space below movies intro paragraph */
+}
+
+/* ========== Footer ========== */
+footer {
+  margin-top: 0;
+  border: none;
+  background: none; /* Transparent footer */
+  padding: 12px 0;
+}
+
+footer p {
+  color: #ffffff;
+}
+
+footer, footer a {
+  color: #4da3ff; /* Footer and links in blue */
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 900px) {
+  #skills ul,
+  #movies ul {
+    flex-direction: column; /* Stack skills/movies vertically */
+    gap: 32px;
+  }
+  #skills li,
+  #movies li {
+    min-width: 0;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  h1 {
+    font-size: 1.4em;
+  }
+  h2 {
+    font-size: 1em;
+  }
+  section, #main-content {
+    padding: 16px 0;
+  }
+  #skills li, #movies li {
+    font-size: 1em;
+    padding: 12px 10px;
+  }
+  #movies ul {
+    gap: 24px;
+  }
+  p {
+    max-width: 95vw;
+    font-size: 1em;
+  }
 }
