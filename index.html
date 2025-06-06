@@ -13,6 +13,19 @@
       <h2>Scroll down to learn more about me!</h2>
     </header>
 
+    <!-- Dropdown Navigation -->
+    <nav id="dropdown-nav">
+      <button id="menu-btn" aria-label="Open navigation">&#9776;</button>
+      <div id="dropdown-menu">
+        <ul>
+          <li><a href="#about" onclick="scrollToSection(event, 'about')">About Me</a></li>
+          <li><a href="#skills" onclick="scrollToSection(event, 'skills')">Skills</a></li>
+          <li><a href="#movies" onclick="scrollToSection(event, 'movies')">Favorite Movies</a></li>
+          <li><a href="#connections" onclick="scrollToSection(event, 'connections')">Connect With Me</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <main>
       <section id="main-content">
         <!-- About Me -->
@@ -82,5 +95,25 @@
     <footer>
       <p>@2025 William Cummings</p>
     </footer>
+
+    <script>
+      const menuBtn = document.getElementById('menu-btn');
+      const dropdownMenu = document.getElementById('dropdown-menu');
+      menuBtn.onclick = () => {
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+      };
+      // Optional: Hide menu when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!menuBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+          dropdownMenu.style.display = 'none';
+        }
+      });
+
+      function scrollToSection(event, sectionId) {
+        event.preventDefault();
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    </script>
   </body>
 </html>
