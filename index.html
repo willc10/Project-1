@@ -9,7 +9,8 @@
   <body>
     <header>
       <h1>William Cummings</h1>
-      <img src="img/me.jpg" alt="William Cummings" class="profile-pic">
+      <h2>925-351-3435 | williamcummings310@gmail.com</h2> <!--contact information maybe fix???-->
+      <img src="img/newme.png" alt="William Cummings" class="profile-pic">
       <h2>Scroll down to learn more about me!</h2>
     </header>
 
@@ -20,7 +21,7 @@
         <ul>
           <li><a href="#about" onclick="scrollToSection(event, 'about')">About Me</a></li>
           <li><a href="#skills" onclick="scrollToSection(event, 'skills')">Skills</a></li>
-          <li><a href="#movies" onclick="scrollToSection(event, 'movies')">Favorite Movies</a></li>
+          <li><a href="#movies" onclick="scrollToSection(event, 'projects')">Projects</a></li>
           <li><a href="#connections" onclick="scrollToSection(event, 'connections')">Connect With Me</a></li>
         </ul>
       </div>
@@ -49,36 +50,54 @@
           </ul>
         </div>
 
-        <!-- Favorite Movies -->
-        <div id="movies">
-          <h3>Favorite Movies</h3>
-          <p>Here are some of my favorite movies as of recently! Feel free to click the image to read about the movie!</p>
-          <ul>
-            <li>
-              <a href="https://en.wikipedia.org/wiki/The_Benchwarmers" target="_blank">
-                <img src="img/bench.png" alt="The Benchwarmers" style="width:100px; height:auto; border-radius:8px; cursor:pointer;">
+        <!-- Projects -->
+        <div id="projects">
+          <h3>My Projects</h3>
+          <p>Here are 6 projects I've made using CSS, HTML, and Javascript! Click the image or project title to visit the live site.</p>
+          <div class="projects-grid">
+            <div class="project-card">
+              <a href="https://willc10.github.io/07-nasa-space-explorer/" target="_blank">
+                <img src="img/nasa.png" alt="Project 1" style="width:120px; height:auto; border-radius:8px; cursor:pointer;">
+                <h4>NASA Space Explorer</h4>
               </a>
-              The Benchwarmers
-            </li>
-            <li>
-              <a href="https://en.wikipedia.org/wiki/The_Conjuring" target="_blank">
-                <img src="img/conjuring.png" alt="The Conjuring" style="width:100px; height:auto; border-radius:8px; cursor:pointer;">
+              <p>This was my first experience working with APIs and I created a Space Explorer App to look at the Astronomy Picture of the Day.</p>
+            </div>
+            <div class="project-card">
+              <a href="https://willc10.github.io/06-charity-water-game/" target="_blank">
+                <img src="img/gamefinal.png" alt="Project 2" style="width:120px; height:auto; border-radius:8px; cursor:pointer;">
+                <h4>Charity: Water Game</h4>
               </a>
-              The Conjuring
-            </li>
-            <li>
-              <a href="https://en.wikipedia.org/wiki/Hereditary_(film)" target="_blank">
-                <img src="img/hereditary.png" alt="Hereditary" style="width:100px; height:auto; border-radius:8px; cursor:pointer;">
+              <p>This was my first game I ever created which allowed me to work on getting better with Javascript.</p>
+            </div>
+            <div class="project-card">
+              <a href="https://willc10.github.io/09-prj-loreal-routine-builder/" target="_blank">
+                <img src="img/loreal.png" alt="Project 3" style="width:120px; height:auto; border-radius:8px; cursor:pointer;">
+                <h4>L'Oreal AI Routine Builder</h4>
               </a>
-              Hereditary
-            </li>
-            <li>
-              <a href="https://en.wikipedia.org/wiki/Pride_%26_Prejudice_(2005_film)" target="_blank">
-                <img src="img/pandp.png" alt="Pride and Prejudice" style="width:100px; height:auto; border-radius:8px; cursor:pointer;">
+              <p>This is a L'Oreal Routine Builder which allows users to select products and use AI to build their routine.</p>
+            </div>
+            <div class="project-card">
+              <a href="https://willc10.github.io/03-prj-intel-localization/" target="_blank">
+                <img src="img/intel.png" alt="Project 4" style="width:120px; height:auto; border-radius:8px; cursor:pointer;">
+                <h4>Intel's Journey</h4>
               </a>
-              Pride and Prejudice
-            </li>
-          </ul>
+              <p>This showcased Intel's progression towards sustainability and was the first website that I made using media queries</p>
+            </div>
+            <div class="project-card">
+              <a href="https://willc10.github.io/05-charity-water-game-prototype/" target="_blank">
+                <img src="img/game.png" alt="Project 5" style="width:120px; height:auto; border-radius:8px; cursor:pointer;">
+                <h4>Charity: Water Game Prototype</h4>
+              </a>
+              <p>Here is the prototype of my first game which I included to showcase the changes that I made to my final product.</p>
+            </div>
+            <div class="project-card">
+              <a href="https://willc10.github.io/02-prj-intel-sustainability/" target="_blank">
+                <img src="img/intelpro.png" alt="Project 6" style="width:120px; height:auto; border-radius:8px; cursor:pointer;">
+                <h4>Intel's Journey Prototype</h4>
+              </a>
+              <p>Here is the prototype of the Intel website which I included to showcase the changes that I made to my final product.</p>
+            </div>
+          </div>
         </div>
 
         <!-- Connect With Me -->
@@ -96,24 +115,6 @@
       <p>@2025 William Cummings</p>
     </footer>
 
-    <script>
-      const menuBtn = document.getElementById('menu-btn');
-      const dropdownMenu = document.getElementById('dropdown-menu');
-      menuBtn.onclick = () => {
-        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-      };
-      // Optional: Hide menu when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!menuBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
-          dropdownMenu.style.display = 'none';
-        }
-      });
-
-      function scrollToSection(event, sectionId) {
-        event.preventDefault();
-        const section = document.getElementById(sectionId);
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

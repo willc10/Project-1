@@ -26,7 +26,7 @@ header {
 
 /* ========== Typography ========== */
 h1 {
-  font-size: 2.2em;
+  font-size: 2.4em;
   margin-top: 0;
   margin-bottom: 10px;
   color: #ffffff;
@@ -135,33 +135,55 @@ ul, li {
   margin-bottom: 32px; /* Space below skills intro paragraph */
 }
 
-/* ========== Movies Section ========== */
-#movies {
-  margin-bottom: 60px; /* Space below movies section */
+/* ========== Projects Grid ========== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 32px;
+  justify-items: center;
+  padding: 0 32px;
 }
 
-#movies ul {
-  list-style: none; /* Remove bullets */
-  padding: 0;
-  margin: 0;
-  display: flex; /* Horizontal layout */
-  justify-content: center;
-  gap: 64px; /* Space between movie items */
-  align-items: center;
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  max-width: 240px;
+  text-align: center;
+  transition: transform 0.2s;
 }
 
-#movies li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #000000;
-  font-size: 1.1em;
-  min-width: 140px;
+.project-card:hover {
+  transform: translateY(-4px);
 }
 
-#movies p {
-  margin-bottom: 36px; /* Space below movies intro paragraph */
+.project-card img {
+  max-width: 100%;
+  height: auto;
 }
+
+.project-card h4 {
+  margin: 12px 0 6px 0;
+}
+
+#projects p {
+  margin-bottom: 24px; 
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+}
+
 
 /* ========== Footer ========== */
 footer {
@@ -185,18 +207,18 @@ footer, footer a {
   top: 24px;
   right: 32px;
   z-index: 100;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for 2x2 layout */
+  gap: 32px;
+  justify-items: center;
+  padding: 0 32px;
 #menu-btn {
-  background: #23205a;
-  color: #fff;
-  border: none;
-  font-size: 2em;
-  border-radius: 6px;
-  padding: 6px 16px;
+  background: #433eab;
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 column on medium screens */
+  }
+}
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -208,11 +230,11 @@ footer, footer a {
 #dropdown-menu {
   display: none;
   position: absolute;
-  top: 56px;      /* Increased from 48px to 56px for more space below the hamburger */
+  top: 30px;      /* Increased from 48px to 56px for more space below the hamburger */
   right: 0;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 16px rgba(33,26,165,0.10);
+  box-shadow: 0 4px 16px rgba(119, 114, 201, 0.678);
   padding: 12px;
   min-width: 180px;
   z-index: 101;
@@ -230,7 +252,7 @@ footer, footer a {
 }
 
 #dropdown-menu a {
-  color: #23205a;
+  color: #5a52e8;
   text-decoration: none;
   font-size: 1.1em;
   padding: 8px 16px;
@@ -284,4 +306,5 @@ footer, footer a {
     max-width: 95vw;
     font-size: 1em;
   }
+}
 }
